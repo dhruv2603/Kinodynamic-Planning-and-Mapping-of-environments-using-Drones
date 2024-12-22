@@ -52,13 +52,13 @@ We are using `ros-melodic-ompl: 1.4.2-5bionic` for this project.
 ### Running the Planner
 * Simulation
 
-        Terminal-1 : cd PX4-Autpilot && source Tools/simulation/gazebo-classic/setup_gazebo.bash $(pwd) $(pwd)/build/px4_sitl_default && roslaunch gazebo_ros empty_world.launch
+        Terminal-1 : cd /path/to/PX4-Autpilot/ && source Tools/simulation/gazebo-classic/setup_gazebo.bash $(pwd) $(pwd)/build/px4_sitl_default && roslaunch gazebo_ros empty_world.launch
 
-        Terminal-2 : cd mp_ws && roslaunch KinodynamicRRT MappingSim.launch
+        Terminal-2 : cd /path/to/mp_project_ws/ && roslaunch KinodynamicRRT MappingSim.launch
 
-        Terminal-3 : cd mp_ws && roslaunch octomap_server octomap_server_node motion_planning_5.bt
+        Terminal-3 : cd /path/to/mp_project_ws/ && roslaunch octomap_server octomap_server_node motion_planning_5.bt
 
-        Terminal-4 : cd PX4-Autopilot make px4_sitl gazebo-classic_iris_depth_camera
+        Terminal-4 : cd /path/to/PX4-Autopilot/ make px4_sitl gazebo-classic_iris_depth_camera
 
         Terminal-5 : rosrun KinodynamicRRT drone3D /home/shreyas/mp_ws/motion_planning_5.bt
 
